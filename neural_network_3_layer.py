@@ -37,7 +37,7 @@ for j in range(60000):
 	layer_2_error = target_set - layer_2
 
 	if (j% 10000) == 0:
-		print("Error:" + str(np.mean(np.abs(layer_2_error))))
+		print("Error: " + str(np.mean(np.abs(layer_2_error))))
 
 	# in what direction is the target value
 	# were we really sure? if so, don't change it too much
@@ -51,3 +51,5 @@ for j in range(60000):
 
 	layer_2_synaptic_weights = layer_2_synaptic_weights + layer_1.T.dot(layer_2_delta)
 	layer_1_synaptic_weights = layer_1_synaptic_weights + input_layer.T.dot(layer_1_delta)
+
+

@@ -7,6 +7,7 @@ def nonlin(x, deriv=False):
 		return x*(1-x)
 	return 1/(1+np.exp(-x))
 
+
 # input dataset
 input_set = np.array([ [0,0,1],
 				[0,1,1],
@@ -22,6 +23,7 @@ np.random.seed(1)
 # initialize synaptic weights randomly with mean 0
 synaptic_weights = 2*np.random.random((3,1)) - 1
 
+# Train the neural network
 for iter in range(10000):
 	
 	# forward propogation
@@ -38,3 +40,5 @@ for iter in range(10000):
 
 print("Output After Training: ")
 print(output)
+
+# To Do Show input, output & error uploading dynamically
